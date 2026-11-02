@@ -1,0 +1,8 @@
+{
+  "indexes": [
+    { "collectionGroup": "queueEntries", "queryScope": "COLLECTION",
+      "fields": [ {"fieldPath": "doctorId", "order": "ASCENDING"}, {"fieldPath": "status", "order": "ASCENDING"} ] },
+    { "collectionGroup": "queueEntries", "queryScope": "COLLECTION",
+      "fields": [ {"fieldPath": "patientId", "order": "ASCENDING"}, {"fieldPath": "status", "order": "ASCENDING"} ] }
+  ]
+}

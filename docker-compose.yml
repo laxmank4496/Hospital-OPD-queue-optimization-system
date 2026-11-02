@@ -1,0 +1,18 @@
+services:
+  ml-service:
+    build: ./ml-service
+    ports: ["8000:8000"]
+    volumes: ["ml-models:/srv/model_store"]
+  backend:
+    image: maven:3.9-eclipse-temurin-17
+    working_dir: /app
+    command: mvn -q spring-boot:run
+    volumes: ["./backend:/app", "${FIREBASE_CREDENTIALS_PATH:-./secrets/firebase.json}:/secrets/firebase-service-account.json:ro"]
+    env_file: .env
+    environment:
+      FIREBASE_CREDENTIALS_PATH: /secrets/firebase-service-account.json
+      ML_SERVICE_URL: http://ml-service:8000
+    ports: ["8080:8080"]
+    depends_on: [ml-service]
+volumes:
+  ml-models:
