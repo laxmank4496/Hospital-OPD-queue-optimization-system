@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hospital OPD Queue Optimization System
 
 Dynamic OPD queue management + doctor recommendation + waiting-time prediction + fairness + concurrency-safe
@@ -59,3 +60,7 @@ Known gaps: walk-in phone/age are not stored; the patient's own page polls until
 
 ## Running without the ML service (default)
 Only two things need to run: the backend and the frontend. Set `ML_ENABLED=true` and start `ml-service` only if you want model-based estimates.
+=======
+# Hospital-OPD-queue-optimization-system
+Long and unpredictable waiting times in the outpatient departments (OPDs) of hospitals reduce patient satisfaction, waste clinicians’ time . Many hospitals still rely on paper tokens and manual calling, so patients cannot see their position, so we developed Hospital OPD Queue Optimization system
+>>>>>>> 5b09121c7c0b52518508bf3775771cd14c522de8
