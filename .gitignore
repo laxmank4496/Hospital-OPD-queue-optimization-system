@@ -6,3 +6,5 @@ target
 .venv
 __pycache__
 secrets
+.env.*
+!.env.example

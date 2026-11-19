@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: {$8080}
 opd:
   firebase:
     credentials-path: ${FIREBASE_CREDENTIALS_PATH:}      # service-account JSON; or use GOOGLE_APPLICATION_CREDENTIALS
